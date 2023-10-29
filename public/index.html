@@ -4,10 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Flag</title>
     <script src="./script.js"></script>
+    <link rel="stylesheet" href="../dist/output.css">
+    <link rel="stylesheet" href="assets/input.css">
+    
 </head>
-<body>
+<body class="bg-primary">
+    <header class="flex justify-between bg-tertiary items-center w-full px-8 py-6">
+        <div>
+            <h1 class="text-5xl text-secondary">Flag</h1>
+        </div>
+        <nav>
+            <ul class="flex text-white">
+                <li class="mx-4"><a href="#">About us</a></li>
+                <li class="mx-4"><a href="https://restcountries.com/">l'API</a></li>
+                <li class="mx-4"><a href="#">Contact us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="hero mt-12 w-1/3 flex flex-col mx-auto text-center text-white">
+        <h4 class="my-4 text-2xl font-bold">Régles du jeu</h4>
+        <p>
+            <span class="text-lg font-semibold underline">Flag</span> est un jeu passionnant conçu pour tester vos connaissances en matière de drapeaux du monde. Dans ce jeu, un drapeau aléatoire provenant d'un pays du monde entier s'affiche à l'écran, et votre tâche est de deviner à quel pays il appartient. Pour remporter la manche, il vous suffit de donner la bonne réponse. Plus vous devinez de drapeaux correctement, plus votre série de victoires s'allonge.</p>
+    </section>
+    <section class="game mt-14">
+        <div class="flag w-3/12 flex flex-col text-white mx-auto text-center">
+            <img class="w-full" src="assets/drapeau-fr-test.jpg" alt="">
+            <p class="mt-5 text-2xl font-bold">Quelle est ce drapeau ?</p>
+        </div>
 
+        <div class="w-3/12 mt-4 flex text-secondary mx-auto text-center">
+            <input class="w-10/12 text-center font-semibold py-2 rounded-l-xl" type="text" id="player_input" placeholder="tapez ici le nom du pays">
+            <input class="w-2/12 text-white py-2 bg-tertiary rounded-r-xl" type="submit" value="OK">
+        </div>
+    </section>
 </body>
 </html>
