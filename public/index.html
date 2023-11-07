@@ -11,9 +11,9 @@
     
 </head>
 <body class="bg-primary">
-    <header class="flex justify-between bg-tertiary items-center w-full px-8 py-6">
+    <header class="flex justify-between bg-tertiary items-center w-full px-8 py-4">
         <div>
-            <h1 class="text-5xl text-secondary">Flag</h1>
+            <h1 class="text-5xl text-secondary font-bold">Flag</h1>
         </div>
         <nav>
             <ul class="flex text-white">
@@ -30,7 +30,7 @@
     </section>
     <section class="game mt-14">
         <div class="flag w-3/12 flex flex-col text-white mx-auto text-center">
-            <img class="w-full" src="assets/drapeau-fr-test.jpg" alt="">
+            <img id="drapeau" class="w-full h-56 border-8 border-secondary" src="" alt="">
             <p class="mt-5 text-2xl font-bold">Quelle est ce drapeau ?</p>
         </div>
 
@@ -39,5 +39,7 @@
             <input class="w-2/12 text-white py-2 bg-tertiary rounded-r-xl" type="submit" value="OK">
         </div>
     </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
