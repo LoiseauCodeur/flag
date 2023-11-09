@@ -8,8 +8,8 @@
     <script src="./script.js"></script>
     <link rel="stylesheet" href="../dist/output.css">
     <link rel="stylesheet" href="assets/input.css">
-    
 </head>
+
 <body class="bg-primary">
     <header class="flex justify-between bg-tertiary items-center w-full px-8 py-4">
         <div>
@@ -23,24 +23,13 @@
             </ul>
         </nav>
     </header>
-
-    <section id="règles" class="hero mt-14 w-1/3 flex flex-col mx-auto text-center text-white">
+    <section class="hero mt-12 w-1/3 flex flex-col mx-auto text-center text-white">
         <h4 class="my-4 text-2xl font-bold">Régles du jeu</h4>
         <p>
             <span class="text-lg font-semibold underline">Flag</span> est un jeu passionnant conçu pour tester vos connaissances en matière de drapeaux du monde. Dans ce jeu, un drapeau aléatoire provenant d'un pays du monde entier s'affiche à l'écran, et votre tâche est de deviner à quel pays il appartient. Pour remporter la manche, il vous suffit de donner la bonne réponse. Plus vous devinez de drapeaux correctement, plus votre série de victoires s'allonge.</p>
-            <button id="startButton">Start</button>
-    </section>
-
-    <section id="game" class="mt-2">
-        <div class="flag w-3/12 flex flex-col text-white mx-auto text-center">
-            <img id="drapeau" class="w-full h-56 border-8 border-secondary" src="" alt="">
-            <p class="mt-5 text-2xl font-bold">Quelle est ce drapeau ?</p>
-        </div>
-
-        <div class="w-3/12 mt-4 flex text-secondary mx-auto text-center">
-            <input class="w-10/12 text-center font-semibold py-2 rounded-l-xl" id="okInput" type="text" id="player_input" placeholder="Entrez ici le nom du pays">
-            <input class="w-2/12 text-white py-2 bg-tertiary rounded-r-xl" id="okButton" type="submit" value="OK">
-        </div>
+            <a href="jeu.html">
+                <button id="startButton" type="submit">Start</button>
+            </a>
     </section>
 </body>
 </html>
