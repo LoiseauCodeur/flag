@@ -44,17 +44,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
       console.log(bonneReponse);
       // La fonction ici est mise en place afin de vérifier si la réponse de l'utilisateur est correcte
+
+      let error = document.getElementById('drapeau');// Variable error pointant vers l'ément ayant comme ID drapeau
+  
       const verification = (reponse) => {
-        var score = 0;
         if (reponse == bonneReponse) {
-          score++;
-          console.log(score);
           alert("gagné");
+          init();
         } else {
-          score = 0;
-          console.log(score);
-          alert("NUL !");
-          return score;
+          error.classList.add("error", "border-red-800");
+          error.classList.remove("border-secondary");
+          setTimeout(() => {
+            error.classList.remove("border-red-800", "error");
+            error.classList.add("border-secondary");
+          }, 1000);
         }
       };
     };
@@ -73,6 +76,5 @@ document.addEventListener("DOMContentLoaded", function () {
       return { country: randomCountry, flag: randomFlag, name: nameCountry };
     }
   }
-
   init(); // La fonction init est appelée.
 });
