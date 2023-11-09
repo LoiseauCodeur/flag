@@ -569,26 +569,6 @@ video {
   display: flex;
 }
 
-.h-full {
-  height: 100%;
-}
-
-.h-14 {
-  height: 3.5rem;
-}
-
-.h-80 {
-  height: 20rem;
-}
-
-.h-44 {
-  height: 11rem;
-}
-
-.h-52 {
-  height: 13rem;
-}
-
 .h-56 {
   height: 14rem;
 }
@@ -613,18 +593,6 @@ video {
   width: 100%;
 }
 
-.w-16 {
-  width: 4rem;
-}
-
-.w-36 {
-  width: 9rem;
-}
-
-.w-64 {
-  width: 16rem;
-}
-
 .flex-col {
   flex-direction: column;
 }
@@ -647,12 +615,13 @@ video {
   border-bottom-right-radius: 0.75rem;
 }
 
-.border-2 {
-  border-width: 2px;
-}
-
 .border-8 {
   border-width: 8px;
+}
+
+.border-red-800 {
+  --tw-border-opacity: 1;
+  border-color: rgb(153 27 27 / var(--tw-border-opacity));
 }
 
 .border-secondary {
@@ -712,6 +681,10 @@ video {
   font-weight: 600;
 }
 
+.capitalize {
+  text-transform: capitalize;
+}
+
 .text-secondary {
   --tw-text-opacity: 1;
   color: rgb(102 65 71 / var(--tw-text-opacity));
@@ -726,6 +699,38 @@ video {
   text-decoration-line: underline;
 }
 
+@keyframes shake-horizontal {
+  0%,
+    100% {
+    transform: translateX(0);
+  }
+
+  10%,
+    30%,
+    50%,
+    70% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+    40%,
+    60% {
+    transform: translateX(10px);
+  }
+
+  80% {
+    transform: translateX(8px);
+  }
+
+  90% {
+    transform: translateX(-8px);
+  }
+}
+
 h1 {
   font-family: 'Bebas Neue', sans-serif;
+}
+
+.error {
+  animation: shake-horizontal 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
 }

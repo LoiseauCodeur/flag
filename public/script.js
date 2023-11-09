@@ -28,11 +28,19 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
       console.log(bonneReponse);
+
+      let error = document.getElementById('drapeau');
       const verification = (reponse) => {
         if (reponse == bonneReponse) {
           alert("gagné");
+          init();
         } else {
-          alert("NUL !");
+          error.classList.add("error", "border-red-800");
+          error.classList.remove("border-secondary");
+          setTimeout(() => {
+            error.classList.remove("border-red-800", "error");
+            error.classList.add("border-secondary");
+          }, 1000);
         }
       };
     };
