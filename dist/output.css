@@ -736,3 +736,24 @@ video {
 h1 {
   font-family: 'Bebas Neue', sans-serif;
 }
+
+
+#startButton{
+  display: flex;
+  font-family: 'Bebas Neue', sans-serif;
+  padding-left: 80px;
+  padding-right: 80px;
+  margin-top:80px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: 25px;
+  border-radius: 5px;
+  color: white;
+  background-color: rgb(85 111 68);
+}
+
+#startButton:hover{
+  background-color: white;
+  color:rgb(85 111 68); 
+}
