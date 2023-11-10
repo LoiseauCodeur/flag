@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // la fonction de vérification est appelée avec la valeur de l'input comme argument.
       okButton.addEventListener("click", () => {
         verification(capitalize(input.value));
-        console.log("byutoon");
+        // console.log("byutoon");
       });
 
       input.addEventListener("keydown", (event) => {
@@ -46,19 +46,32 @@ document.addEventListener("DOMContentLoaded", function () {
       // La fonction ici est mise en place afin de vérifier si la réponse de l'utilisateur est correcte
 
       let error = document.getElementById('drapeau');// Variable error pointant vers l'ément ayant comme ID drapeau
-  
+      
+      let faute = 0;
+
+      let fl1 = document.getElementById("flag-1");
+      let fl2 = document.getElementById("flag-2");
+      let fl3 = document.getElementById("flag-3");
+
       const verification = (reponse) => {
         if (reponse == bonneReponse) {
           alert("gagné");
           init();
-        } else {
+        }else{
+          faute++
           error.classList.add("error", "border-red-800");
           error.classList.remove("border-secondary");
           setTimeout(() => {
             error.classList.remove("border-red-800", "error");
             error.classList.add("border-secondary");
           }, 1000);
-        }
+          console.log(faute);
+          if(faute <= 3){
+            document.getElementById(`flag-${faute}`).style.opacity = 0.5;
+          }else{
+            alert("STOP C'EST MORT !!!")
+          };
+        };
       };
     };
 

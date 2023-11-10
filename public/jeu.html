@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flag</title>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.0.0/uicons-solid-straight/css/uicons-solid-straight.css'>
     <script src="./script.js"></script>
     <link rel="stylesheet" href="../dist/output.css">
     <link rel="stylesheet" href="assets/input.css">
@@ -13,7 +14,7 @@
 <body class="bg-primary">
     <header class="flex justify-between bg-tertiary items-center w-full px-8 py-4">
         <div>
-            <h1 class="text-5xl text-secondary font-bold">Flag</h1>
+            <a href="index.html"><h1 class="text-5xl text-secondary font-bold">Flag</h1></a>
         </div>
         <nav>
             <ul class="flex text-white">
@@ -23,7 +24,13 @@
             </ul>
         </nav>
     </header>
-    
+
+    <div class="flex justify-center pt-14 text-red-600 space-x-20 text-5xl">
+        <i id="flag-1" class="fi fi-ss-flag"></i>
+        <i id="flag-2" class="fi fi-ss-flag"></i>
+        <i id="flag-3" class="fi fi-ss-flag"></i>
+    </div>
+
     <section class="game mt-14">
         <div class="flag w-3/12 flex flex-col text-white mx-auto text-center">
             <img id="drapeau" class="w-full h-56 border-8 border-secondary" src="" alt="">
@@ -31,7 +38,7 @@
         </div>
 
         <div class="w-3/12 mt-4 flex text-secondary mx-auto text-center">
-            <input class="w-10/12 text-center font-semibold py-2 rounded-l-xl" id="okInput" type="text" id="player_input" placeholder="Entrez ici le nom du pays">
+            <input class="w-10/12 text-center font-semibold py-2 rounded-l-xl" id="okInput" type="text" placeholder="Entrez ici le nom du pays">
             <input class="w-2/12 text-white py-2 bg-tertiary rounded-r-xl" id="okButton" type="submit" value="OK">
         </div>
     </section>
