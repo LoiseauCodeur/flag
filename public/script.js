@@ -46,6 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // La fonction ici est mise en place afin de vérifier si la réponse de l'utilisateur est correcte
 
       let error = document.getElementById('drapeau');// Variable error pointant vers l'ément ayant comme ID drapeau
+      let correct = document.getElementById('drapeau');
       
       let faute = 0;
 
@@ -55,18 +56,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
       const verification = (reponse) => {
         if (reponse == bonneReponse) {
-          alert("gagné");
-          console.log(reponse,bonneReponse);
+          correct.classList.add("border-green-500", "shadow-xl", "shadow-green-800");
+          correct.classList.remove("border-secondary");
+          setTimeout(() => {
+            correct.classList.remove("border-green-500","shadow-xl", "shadow-green-800");
+            correct.classList.add("border-secondary");
+          }, 1000);
+          console.log(reponse);
+          reponse = null;
+          bonneReponse = null;
           init();
+          
         }else{
-          faute++
+         
           error.classList.add("error", "border-red-800");
           error.classList.remove("border-secondary");
           setTimeout(() => {
             error.classList.remove("border-red-800", "error");
             error.classList.add("border-secondary");
           }, 1000);
+          faute++
           console.log(faute);
+          
           if(faute <= 3){
             document.getElementById(`flag-${faute}`).style.opacity = 0.5;
           }else{
@@ -75,7 +86,8 @@ document.addEventListener("DOMContentLoaded", function () {
         };
       };
     };
-
+    reponse = null;
+    
     // function capitalize() est définie pour mettre en majuscule la première lettre d'une chaîne de caractères
     let capitalize = (a) => (a && a[0].toUpperCase() + a.slice(1)) || ""; //https://stackoverflow.com/questions/1026069/how-do-i-make-the-first-letter-of-a-string-uppercase-in-javascript
 
