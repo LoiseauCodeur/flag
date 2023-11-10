@@ -534,6 +534,10 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.invisible {
+  visibility: hidden;
+}
+
 .mx-4 {
   margin-left: 1rem;
   margin-right: 1rem;
@@ -573,8 +577,12 @@ video {
   display: flex;
 }
 
-.h-56 {
-  height: 14rem;
+.hidden {
+  display: none;
+}
+
+.h-1\/2 {
+  height: 50%;
 }
 
 .w-1\/3 {
@@ -828,6 +836,7 @@ h1 {
   animation: shake-horizontal 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
 }
 
+<<<<<<< Updated upstream
 .hover\:bg-white:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -836,4 +845,31 @@ h1 {
 .hover\:text-green-700:hover {
   --tw-text-opacity: 1;
   color: rgb(21 128 61 / var(--tw-text-opacity));
+=======
+@media (min-width: 768px) {
+  .md\:visible {
+    visibility: visible;
+  }
+
+  .md\:block {
+    display: block;
+  }
+
+  .md\:flex {
+    display: flex;
+  }
+
+  .md\:w-fit {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+
+  .md\:text-left {
+    text-align: left;
+  }
+
+  .md\:text-center {
+    text-align: center;
+  }
+>>>>>>> Stashed changes
 }
