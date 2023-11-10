@@ -56,6 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const verification = (reponse) => {
         if (reponse == bonneReponse) {
           alert("gagné");
+          console.log(reponse,bonneReponse);
           init();
         }else{
           faute++
