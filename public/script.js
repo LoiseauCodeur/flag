@@ -46,15 +46,19 @@ document.addEventListener("DOMContentLoaded", function () {
       // La fonction ici est mise en place afin de vérifier si la réponse de l'utilisateur est correcte
 
       let error = document.getElementById('drapeau');// Variable error pointant vers l'ément ayant comme ID drapeau
-      let correct = document.getElementById('drapeau');
+      let correct = document.getElementById('drapeau');// Variable error pointant vers l'ément ayant comme ID drapeau
       
       let faute = 0;
+      // Création de la variable faute
 
+      // Mise en place des différentes varirables pointant vers les différents drapeaux
       let fl1 = document.getElementById("flag-1");
       let fl2 = document.getElementById("flag-2");
       let fl3 = document.getElementById("flag-3");
 
+      // Fonction de vérificiation de bonne reponse
       const verification = (reponse) => {
+        // En cas de bonne réponse du joueur
         if (reponse == bonneReponse) {
           correct.classList.add("border-green-500", "shadow-xl", "shadow-green-800");
           correct.classList.remove("border-secondary");
@@ -66,9 +70,8 @@ document.addEventListener("DOMContentLoaded", function () {
           reponse = null;
           bonneReponse = null;
           init();
-          
+        // En cas de mauvaise réponse du joueur
         }else{
-         
           error.classList.add("error", "border-red-800");
           error.classList.remove("border-secondary");
           setTimeout(() => {
@@ -76,8 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
             error.classList.add("border-secondary");
           }, 1000);
           faute++
-          console.log(faute);
-          
+          // Gestion des vies en grisant les drapeaux
           if(faute <= 3){
             document.getElementById(`flag-${faute}`).style.opacity = 0.5;
           }else{
