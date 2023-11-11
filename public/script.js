@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // La fonction init() est apppelée lorsque le DOM est prêt
   function init() {
     // fetch() est ici mis pour faire une requête HTTP à l'API des pays
-    fetch("https://restcountries.com/v3.1/all")
+    fetch("https://restcountries.com/v3.1/independent?status=true")
       .then((response) => response.json()) // La réponse est convertie en JSON
       .then((data) => {
         const randomData = getRandomCountry(data); // Un pays choisit aléatoirement est récupérer
