@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flag</title>
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.0.0/uicons-solid-straight/css/uicons-solid-straight.css'>
     <script src="./script.js"></script>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.0.0/uicons-solid-straight/css/uicons-solid-straight.css'>
+    <link rel="icon" type="image/png" href="assets/images/favicon.png"/>
     <link rel="stylesheet" href="../dist/output.css">
     <link rel="stylesheet" href="assets/input.css">
     
@@ -19,7 +20,7 @@
         <nav class="md:w-4/12">
             <ul class="hidden md:justify-end md:visible md:flex text-white">
                 <li class="mx-4"><a href="#">À propos de nous</a></li>
-                <li class="mx-4"><a href="https://restcountries.com/">l'API</a></li>
+                <li class="mx-4"><a href="https://restcountries.com/" target="_blank">l'API</a></li>    
                 <li class="mx-4"><a href="#">Nous contacter</a></li>
             </ul>
         </nav>
@@ -34,16 +35,21 @@
     <section class="game mt-14">
         <div class="flag w-3/12 flex flex-col text-white mx-auto text-center">
             <img id="drapeau" class="w-full h-1/2 border-8 border-secondary" src="" alt="">
-            <p class="mt-5 text-2xl font-bold">Quelle est ce drapeau ?</p>
+            <p id="question" class="mt-5 text-2xl font-bold">Quelle est ce drapeau ?</p>
         </div>
 
-        <div class="w-3/12 mt-4 flex text-secondary mx-auto text-center">
+        <div id="champ-rep" class="w-3/12 mt-4 flex text-secondary mx-auto text-center">
             <input class="w-10/12 text-center font-semibold py-2 rounded-l-xl" id="okInput" type="text" id="player_input" placeholder="Entrez ici le nom du pays">
             <input class="w-2/12 text-white py-2 bg-tertiary rounded-r-xl" id="okButton" type="submit" value="OK">
         </div>
 
+        <div id="loose" class="flex flex-col py-2 text-2xl items-center text-white">
+            <p>Perdu 😔</p>
+            <p>Score : <span id="score"></span></p>
+        </div>
+
         <div class="w-auto flex m-auto">
-            <p id="rate" class="hidden m-auto w-auto text-center text-white bg-green-700  text-2xl mt-10">
+            <p id="rate" class="hidden m-auto w-auto text-center text-white bg-tertiary py-2 px-3 text-2xl mt-10">
                 Mauvaise réponse, c'était : <span id="rateReponse"></span>
             </p>
             <button type="button" id="recommencer" class="hidden m-auto text-white bg-green-700 hover:bg-white hover:text-green-700 text-2xl py-2 px-20 mx-auto mt-10 rounded-md">
