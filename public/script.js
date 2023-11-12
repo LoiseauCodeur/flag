@@ -128,46 +128,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const rate = document.querySelector("#rate");
     const rateReponse = document.querySelector("#rateReponse");
 
-    // const verification = (reponse) => {
-    //   console.log(reponse, bonneReponse);
-    //   if (reponse.trim() === bonneReponse.trim()) {
-    //     correct.classList.add(
-    //       "border-green-500",
-    //       "shadow-xl",
-    //       "shadow-green-800"
-    //     );
-    //     correct.classList.remove("border-secondary");
-    //     setTimeout(() => {
-    //       correct.classList.remove(
-    //         "border-green-500",
-    //         "shadow-xl",
-    //         "shadow-green-800"
-    //       );
-    //       correct.classList.add("border-secondary");
-    //     }, 1000);
-    //     init();
-    //   } else {
-        // console.log(reponse, bonneReponse);
-        // console.log(input.value);
-        // alert("test");
-        // error.classList.add("error", "border-red-800");
-        // error.classList.remove("border-secondary");
-        // setTimeout(() => {
-        //   error.classList.remove("border-red-800", "error");
-        //   error.classList.add("border-secondary");
-        // }, 1000);
-        // faute++;
-        // console.log(faute);
-    //     if (faute == 3) {
-    //       document.getElementById(`flag-${faute}`).style.opacity = 0.5;
-    //       faute = 1;
-    //       rate.classList.remove("hidden");
-    //       rateReponse.classList.remove("hidden");
-    //       rateReponse.innerHTML = bonneReponse;
-    //       recommencer.classList.remove("hidden");
-    //     }
-    //   }
-    // };
+   
     
     console.log(bonneReponse);
 
